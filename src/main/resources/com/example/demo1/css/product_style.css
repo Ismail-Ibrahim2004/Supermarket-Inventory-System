@@ -1,0 +1,42 @@
+.modern-table {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+}
+.status-in {
+    -fx-background-color: #dcfce7;
+    -fx-text-fill: #166534;
+    -fx-background-radius: 15;
+    -fx-padding: 2 10;
+    -fx-font-weight: bold;
+}
+.status-low {
+    -fx-background-color: #fef9c3;
+    -fx-text-fill: #854d0e;
+    -fx-background-radius: 15;
+    -fx-padding: 2 10;
+    -fx-font-weight: bold;
+}
+.status-out {
+    -fx-background-color: #fee2e2;
+    -fx-text-fill: #991b1b;
+    -fx-background-radius: 15;
+    -fx-padding: 2 10;
+    -fx-font-weight: bold;
+}
+.icon-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+action-edit {
+    -fx-text-fill: #3b82f6;
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}
+
+.action-delete {
+    -fx-text-fill: #ef4444;
+    -fx-background-color: transparent;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+}

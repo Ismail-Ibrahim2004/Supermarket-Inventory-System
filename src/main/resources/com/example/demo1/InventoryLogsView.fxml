@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" styleClass="content-pane" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.InventoryLogsController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <VBox spacing="5">
+        <Label text="Inventory Logs" styleClass="header-title" />
+        <Label text="Track all inventory movements and changes" styleClass="header-subtitle" />
+    </VBox>
+
+    <HBox spacing="15" alignment="CENTER_LEFT" styleClass="filter-container">
+        <Button text="Filter by Action" styleClass="filter-button" />
+        <Button text="Filter by Product" styleClass="filter-button" />
+        <Region HBox.hgrow="ALWAYS" />
+        <DatePicker fx:id="datePicker" promptText="Select Date" />
+    </HBox>
+
+    <TableView fx:id="logsTable" VBox.vgrow="ALWAYS" styleClass="modern-table">
+        <columns>
+            <TableColumn fx:id="colDate" text="Date &amp; Time" prefWidth="150" />
+            <TableColumn fx:id="colProduct" text="Product" prefWidth="130" />
+            <TableColumn fx:id="colAction" text="Action" prefWidth="100" />
+            <TableColumn fx:id="colQuantity" text="Quantity" prefWidth="90" />
+            <TableColumn fx:id="colUser" text="User" prefWidth="110" />
+            <TableColumn fx:id="colNotes" text="Notes" prefWidth="180" />
+        </columns>
+        <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+</VBox>

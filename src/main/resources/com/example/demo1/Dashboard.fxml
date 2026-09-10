@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="720.0" prefWidth="1280.0" stylesheets="@css/Dashboard_style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.DashboardController">
+
+    <VBox prefWidth="250.0" styleClass="sidebar">
+        <padding>
+            <Insets bottom="20.0" left="15.0" right="15.0" top="30.0" />
+        </padding>
+
+        <VBox alignment="CENTER" spacing="10" styleClass="user-profile-box">
+            <StackPane styleClass="avatar-container">
+            <children>
+               <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@images/userS.png" />
+                  </image>
+               </ImageView>
+            </children>
+            </StackPane>
+            <VBox alignment="CENTER">
+                <Label fx:id="userNameLabel" styleClass="user-name" text="Admin User" />
+                <Label fx:id="userRoleLabel" styleClass="user-role" text="Admin" />
+            </VBox>
+        </VBox>
+
+        <Separator prefWidth="200.0" style="-fx-padding: 20 0;" />
+
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+            <VBox spacing="10" styleClass="nav-container">
+                <Button fx:id="btnDashboard" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button, active" text="Dashboard">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/dashboardNN.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnProducts" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="Products">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/box.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnSuppliers" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="Suppliers">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/supplier (1).png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnCashiers" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="Cashiers">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/clerk.png" />
+                     </image></ImageView>
+               </graphic></Button>
+                <Button fx:id="btnPOS" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="POS System">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/pos-terminal.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnInventory" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="Inventory Logs">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/files.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnReports" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="Sales Reports">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/sales.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnSettings" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="Settings">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/gear.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="btnAbout" graphicTextGap="15.0" maxWidth="Infinity" styleClass="nav-button" text="About">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/about.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            </VBox>
+        </ScrollPane>
+
+        <Button fx:id="btnLogout" maxWidth="Infinity" styleClass="logout-button" text="Logout">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logout (1).png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+    </VBox>
+
+    <StackPane fx:id="contentArea" styleClass="main-content" HBox.hgrow="ALWAYS">
+        <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+        </padding>
+    </StackPane>
+
+</HBox>

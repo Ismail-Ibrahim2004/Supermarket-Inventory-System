@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" stylesheets="@css/Dashboard_style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.SettingsController">
+    <content>
+        <VBox spacing="25" styleClass="content-pane">
+            <padding><Insets bottom="30" left="30" right="30" top="30" /></padding>
+
+            <VBox spacing="5">
+                <Label styleClass="header-title" text="Settings" />
+                <Label styleClass="header-subtitle" text="Manage your application preferences" />
+            </VBox>
+
+            <VBox spacing="20" styleClass="chart-container">
+                <HBox alignment="CENTER_LEFT" spacing="15">
+                    <Label style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #1A71E4, #1659B4); -fx-background-radius: 10;" styleClass="icon-label-blue">
+                  <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/userS.png" />
+                        </image>
+                     </ImageView>
+                  </graphic></Label>
+                    <VBox>
+                        <Label styleClass="p-name" text="User Settings" />
+                        <Label styleClass="p-category" text="Update your personal information" />
+                    </VBox>
+                </HBox>
+
+                <GridPane hgap="20" vgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="50" />
+                        <ColumnConstraints percentWidth="50" />
+                    </columnConstraints>
+
+                    <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <Label styleClass="card-label" text="Full Name" />
+                        <TextField fx:id="txtFullName" promptText="John Doe" styleClass="settings-input" />
+                    </VBox>
+
+                    <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <Label styleClass="card-label" text="Email Address" />
+                        <TextField fx:id="txtEmail" promptText="john.doe@email.com" styleClass="settings-input" />
+                    </VBox>
+
+                    <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <Label styleClass="card-label" text="Username" />
+                        <TextField fx:id="txtUsername" promptText="username" styleClass="settings-input" />
+                    </VBox>
+
+                    <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <Label styleClass="card-label" text="Phone Number" />
+                        <TextField fx:id="txtPhone" promptText="+1 234-567-8900" styleClass="settings-input" />
+                    </VBox>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                </GridPane>
+
+                <HBox alignment="CENTER_RIGHT" spacing="15">
+                    <Button prefWidth="100" styleClass="filter-button" text="Cancel" />
+                    <Button onAction="#handleSave" prefWidth="140" styleClass="checkout-button" text="Save Changes" />
+                </HBox>
+            </VBox>
+
+            <VBox spacing="20" styleClass="chart-container">
+                <HBox alignment="CENTER_LEFT" spacing="15">
+                    <Label style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #A83EFF, #9C21FD); -fx-background-radius: 10;" styleClass="icon-label-purple">
+                  <graphic>
+                     <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@images/globe.png" />
+                        </image>
+                     </ImageView>
+                  </graphic></Label>
+                    <VBox>
+                        <Label styleClass="p-name" text="System Preferences" />
+                        <Label styleClass="p-category" text="Configure application behavior" />
+                    </VBox>
+                </HBox>
+
+                <VBox spacing="15">
+                    <HBox alignment="CENTER_LEFT">
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label styleClass="p-name" text="Enable Notifications" />
+                        </VBox>
+                        <ToggleButton fx:id="btnNotifications" styleClass="toggle-switch" />
+                    </HBox>
+                    <Separator />
+                    <HBox alignment="CENTER_LEFT">
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label styleClass="p-name" text="Auto-save Changes" />
+                        </VBox>
+                        <ToggleButton fx:id="btnAutosave" styleClass="toggle-switch" />
+                    </HBox>
+                </VBox>
+            </VBox>
+        </VBox>
+    </content>
+</ScrollPane>

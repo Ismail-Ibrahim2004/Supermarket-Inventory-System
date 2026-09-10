@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="25" styleClass="content-pane" stylesheets="@css/Dashboard_style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.demo1.SuppliersController">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25" />
+    </padding>
+
+    <HBox alignment="CENTER_LEFT">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label styleClass="header-title" text="Suppliers" />
+            <Label styleClass="header-subtitle" text="Manage your supplier relationships" />
+        </VBox>
+        <Button onAction="#handleAddSupplier" styleClass="checkout-button" text="+ Add Supplier" />
+    </HBox>
+
+    <VBox styleClass="chart-container" VBox.vgrow="ALWAYS">
+        <TableView fx:id="suppliersTable" styleClass="modern-table" VBox.vgrow="ALWAYS">
+            <columns>
+                <TableColumn fx:id="colName" prefWidth="120" text="Name" />
+                <TableColumn fx:id="colContact" prefWidth="120" text="Contact" />
+                <TableColumn fx:id="colEmail" prefWidth="150" text="Email" />
+                <TableColumn fx:id="colItems" prefWidth="130" text="Items Provided" /> <TableColumn fx:id="colAddress" prefWidth="120" text="Address" />
+                <TableColumn fx:id="colStatus" prefWidth="90" text="Status" />
+                <TableColumn fx:id="colActions" prefWidth="110" text="Actions" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </VBox>
+</VBox>

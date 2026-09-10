@@ -1,0 +1,110 @@
+/* الإعدادات العامة */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* القسم الأيسر - تدرج أزرق احترافي */
+.left-pane {
+    -fx-background-color: linear-gradient(to bottom right, #2563eb, #1e3a8a);
+}
+
+.logo-container {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-background-radius: 25;
+    -fx-min-width: 120;
+    -fx-min-height: 120;
+    -fx-max-width: 120;
+}
+
+.main-title {
+    -fx-text-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.main-subtitle {
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 15px;
+}
+
+/* القسم الأيمن */
+.right-pane {
+    -fx-background-color: white;
+}
+
+.small-logo-container {
+    -fx-background-color: #2563eb;
+    -fx-background-radius: 12;
+    -fx-min-width: 55;
+    -fx-min-height: 55;
+    -fx-max-width: 55;
+}
+
+.welcome-text {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+.signin-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #64748b;
+}
+
+.field-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: #475569;
+    -fx-font-size: 13px;
+}
+
+/* الحقول */
+.input-field, .combo-box-style {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 0 12;
+    -fx-font-size: 14px;
+}
+
+.input-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-background-color: white;
+}
+
+/* الأزرار */
+.primary-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8;
+    -fx-text-fill: #1e293b;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #f1f5f9;
+}
+
+.forgot-link {
+    -fx-text-fill: #2563eb;
+    -fx-underline: false;
+    -fx-font-weight: bold;
+}
+
+.footer-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #94a3b8;
+}

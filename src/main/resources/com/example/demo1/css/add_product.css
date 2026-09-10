@@ -1,0 +1,18 @@
+.root {
+    -fx-background-color: white;
+}
+.text-field {
+    -fx-background-radius: 5;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 5;
+    -fx-padding: 8;
+}
+.text-field:focused {
+    -fx-border-color: #3b82f6;
+}
+.btn-save {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}

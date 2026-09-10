@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane stylesheets="@css/Dashboard_style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.POSController">
+    <HBox spacing="20" styleClass="content-pane">
+        <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+        </padding>
+
+        <VBox spacing="15" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="10" styleClass="search-container">
+                <TextField fx:id="searchField" prefHeight="40.0" promptText="Search products by name..." styleClass="search-field" HBox.hgrow="ALWAYS" />
+            </HBox>
+
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" VBox.vgrow="ALWAYS">
+                <FlowPane fx:id="productsFlowPane" hgap="15.0" prefWrapLength="800.0" vgap="15.0" styleClass="products-grid">
+                    <padding>
+                        <Insets bottom="10.0" left="5.0" right="10.0" top="5.0" />
+                    </padding>
+                </FlowPane>
+            </ScrollPane>
+        </VBox>
+
+        <VBox maxWidth="380.0" minWidth="320.0" spacing="15" styleClass="cart-container">
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+
+            <Label styleClass="cart-title" text="Current Cart" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+            <ListView fx:id="cartListView" styleClass="cart-list" VBox.vgrow="ALWAYS" />
+
+            <VBox spacing="12" styleClass="summary-box" style="-fx-background-color: #ffffff; -fx-background-radius: 10;">
+                <padding>
+                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                </padding>
+
+                <HBox alignment="CENTER_LEFT">
+                    <Label text="Subtotal" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label fx:id="subtotalLabel" text="\$0.00" />
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT">
+                    <Label text="Tax (14%)" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label fx:id="taxLabel" text="\$0.00" />
+                </HBox>
+
+                <Separator style="-fx-opacity: 0.3;" />
+
+                <HBox alignment="CENTER_LEFT">
+                    <Label text="Total" style="-fx-font-weight: bold; -fx-font-size: 16px;" />
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Label fx:id="totalLabel" text="\$0.00" style="-fx-font-weight: bold; -fx-font-size: 16px; -fx-text-fill: #2563eb;" />
+                </HBox>
+            </VBox>
+
+            <Button fx:id="btnCheckout" maxWidth="Infinity" onAction="#handleCheckout" prefHeight="50.0"
+                    style="-fx-background-color: #2563eb; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-cursor: hand;"
+                    text="Complete Checkout" />
+        </VBox>
+    </HBox>
+</StackPane>

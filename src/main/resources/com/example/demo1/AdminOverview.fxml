@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" styleClass="content-pane" stylesheets="@css/Dashboard_style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AdminOverviewController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+
+    <VBox spacing="5">
+        <Label styleClass="header-title" text="Dashboard Overview" />
+        <Label styleClass="header-subtitle" text="Welcome back! Here's what's happening today." />
+    </VBox>
+
+    <HBox alignment="CENTER" spacing="20">
+        <VBox styleClass="stat-card">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #00C155, #00A164); -fx-background-radius: 10;" stylesheets="@css/Dashboard_style.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/dollar-symbol (1).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding></Label> <Region HBox.hgrow="ALWAYS" />
+                <Label styleClass="percentage-green" text="+12.5%" textFill="#119642" />
+            </HBox>
+            <Label prefWidth="88.0" styleClass="card-label" text="Total Revenue">
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin></Label>
+            <Label fx:id="revenueLabel" styleClass="card-value" text="\$116,500" />
+        </VBox>
+
+        <VBox styleClass="stat-card">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #1A71E4, #1659B4); -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/box1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding></Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Label styleClass="percentage-blue" text="+8.2%" textFill="#119642" />
+            </HBox>
+            <Label styleClass="card-label" text="Products Sold">
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin></Label>
+            <Label fx:id="soldLabel" styleClass="card-value" text="42,600" />
+        </VBox>
+
+        <VBox styleClass="stat-card">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #A83EFF, #9C21FD); -fx-background-radius: 10;">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/userS.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding></Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Label styleClass="percentage-purple" text="+5.7%" textFill="#119642" />
+            </HBox>
+            <Label styleClass="card-label" text="Active Customers">
+            <VBox.margin>
+               <Insets top="5.0" />
+            </VBox.margin></Label>
+            <Label fx:id="customersLabel" styleClass="card-value" text="1,245" />
+        </VBox>
+
+        <VBox styleClass="stat-card">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FF6500, #F84F00); -fx-background-radius: 10;">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/growth-chart.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                    </padding>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Label fx:id="growthPercentLabel" styleClass="percentage-orange" text="0.0%" />
+            </HBox>
+            <Label styleClass="card-label" text="Growth Rate">
+                <VBox.margin><Insets top="5.0" /></VBox.margin>
+            </Label>
+            <Label fx:id="growthLabel" styleClass="card-value" text="0.0%" />
+        </VBox>
+    </HBox>
+
+    <VBox styleClass="chart-container" VBox.vgrow="ALWAYS">
+        <Label styleClass="chart-title" text="Sales Analytics" />
+        <Label styleClass="chart-subtitle" text="Monthly sales and revenue trends" />
+        <LineChart fx:id="salesChart" createSymbols="false">
+            <xAxis><CategoryAxis side="BOTTOM" /></xAxis>
+            <yAxis><NumberAxis side="LEFT" /></yAxis>
+        </LineChart>
+    </VBox>
+</VBox>

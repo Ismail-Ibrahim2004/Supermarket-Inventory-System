@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="25" styleClass="content-pane" stylesheets="@css/Dashboard_style.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.SalesReportsController">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25" />
+    </padding>
+
+    <VBox spacing="5">
+        <Label styleClass="header-title" text="Sales Reports" />
+        <Label styleClass="header-subtitle" text="Analyze your sales performance and trends" />
+    </VBox>
+
+    <HBox spacing="20">
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label styleClass="icon-label-green">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/dollar-symbol (1).png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Label style="-fx-text-fill: #22c55e; -fx-font-weight: bold;" text="+15.3%" />
+            </HBox>
+            <Label styleClass="card-label" text="Total Sales (This Week)" />
+            <Label fx:id="totalSalesLabel" styleClass="card-value" text="\$0.00" />
+        </VBox>
+
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #1A71E4, #1659B4);" styleClass="icon-label-blue">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/box1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <padding>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                    </padding>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+                <Label style="-fx-text-fill: #3b82f6;" text="Top Seller" />
+            </HBox>
+            <Label styleClass="card-label" text="Best Selling Product" />
+            <VBox spacing="2">
+                <Label fx:id="bestProductLabel" styleClass="card-value" style="-fx-font-size: 18px;" text="No Data" />
+                <Label fx:id="unitsSoldLabel" styleClass="card-label" text="0 units" />
+            </VBox>
+        </VBox>
+        <VBox styleClass="stat-card" HBox.hgrow="ALWAYS">
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <Label style="-fx-background-color: FAF9F6;" styleClass="icon-label-purple">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/svg.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Label>
+            </HBox>
+            <Label styleClass="card-label" text="Top Revenue Day" />
+            <Label fx:id="topDayLabel" styleClass="card-value" text="---" />
+        </VBox>
+    </HBox>
+
+    <VBox styleClass="chart-container" VBox.vgrow="ALWAYS">
+        <Label styleClass="chart-title" text="Weekly Sales Overview" />
+        <Label styleClass="chart-subtitle" text="Daily sales for the current week" />
+        <BarChart fx:id="salesBarChart" legendVisible="false" verticalGridLinesVisible="false">
+            <xAxis><CategoryAxis fx:id="daysAxis" side="BOTTOM" /></xAxis>
+            <yAxis><NumberAxis side="LEFT" /></yAxis>
+        </BarChart>
+    </VBox>
+</VBox>
